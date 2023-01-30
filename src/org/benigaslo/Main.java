@@ -1,12 +1,14 @@
 package org.benigaslo;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 class Biblio {
     String nom;
     String city;
-    List<Llibre> llibres;
+    List<Llibre> llibres = new ArrayList<>();
+
 
     public Biblio(String nom, String city) {
         this.nom = nom;
@@ -31,9 +33,25 @@ public class Main {
         Llibre llibre3 = new Llibre("Libro3", 1200);
 
         Biblio biblio1 = new Biblio("Biblio1", "La Vall");
-        Biblio biblio2 = new Biblio("Biblio1", "Fondeguilla");
+        Biblio biblio2 = new Biblio("Biblio2", "Fondeguilla");
 
 
         biblio1.llibres.add(llibre1);
+        biblio1.llibres.add(llibre2);
+
+        biblio2.llibres.add(llibre1);
+        biblio2.llibres.add(llibre2);
+        biblio2.llibres.add(llibre3);
+
+
+
+        List<Biblio> biblios = new ArrayList<>();
+        biblios.add(biblio1);
+        biblios.add(biblio2);
+
+
+
+
+
     }
 }
