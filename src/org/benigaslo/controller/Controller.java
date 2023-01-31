@@ -6,7 +6,17 @@ public class Controller {
 
 
     public void acorrer(){
-        new View().mostrarMenu();
+        View view = new View();
+
+        view.mostrarMenu();
+
+        int papa = view.pedirOpcion();
+
+        if (papa == 1) {
+            view.mostrarContactos();
+        } else if (papa == 2) {
+            view.pedirDatosContactoNuevo();
+        }
 
 
     }
