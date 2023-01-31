@@ -5,8 +5,11 @@ import java.util.List;
 
 public class Biblio {
     public String nom;
-    String city;
+    public String city;
     List<Llibre> llibres = new ArrayList<>();
+    int id;
+    int numeroLibros;
+
 
 
     public Biblio(String nom, String city) {
