@@ -1,12 +1,12 @@
 package org.benigaslo.view;
 
-import org.benigaslo.controller.BiblioDTO;
-import org.benigaslo.model.Biblio;
+import org.benigaslo.controller.BibliotecaDTO;
+import org.benigaslo.model.Biblioteca;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class View {
+public class Vista {
     Scanner scanner = new Scanner(System.in);
 
     public void mostrarMenu() {
@@ -23,19 +23,19 @@ public class View {
         return opcion;
     }
 
-    public void mostrarBibliotecas(List<Biblio> biblios) {
+    public void mostrarBibliotecas(List<Biblioteca> bibliotecas) {
         System.out.println("LISTA DE Bibliotecas");
 
-        biblios.forEach(biblio -> System.out.println(biblio.nom + " : " + biblio.city));
+        bibliotecas.forEach(biblioteca -> System.out.println(biblioteca.nombre + " : " + biblioteca.ciudad));
     }
 
-    public BiblioDTO pedirDatosBibliotecaNueva() {
+    public BibliotecaDTO pedirDatosBibliotecaNueva() {
         System.out.println("Nombre: ");
         String nombre = scanner.nextLine();
         System.out.println("Ciudad: ");
         String ciudad = scanner.nextLine();
 
-        return new BiblioDTO(nombre, ciudad);
+        return new BibliotecaDTO(nombre, ciudad);
 
     }
 }
