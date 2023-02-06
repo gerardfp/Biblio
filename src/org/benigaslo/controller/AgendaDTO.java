@@ -1,10 +1,10 @@
 package org.benigaslo.controller;
 
-public class BibliotecaDTO {
+public class AgendaDTO {
     public String nombre;
     public String ciudad;
 
-    public BibliotecaDTO(String nombre, String ciudad) {
+    public AgendaDTO(String nombre, String ciudad) {
         this.nombre = nombre;
         this.ciudad = ciudad;
     }
